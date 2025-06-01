@@ -1,0 +1,84 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Page</title>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 40px;
+                background-color: #313030;
+                box-sizing: border-box;
+                background-image: url("photos/banner.jpg");
+            }
+            #hero {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                min-height: 80vh;
+                padding: 40px;
+                margin: 18px auto;
+                max-width: 500px;
+                background-color: white;
+                border-radius: 20px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                box-sizing: border-box;
+            }
+            .child {
+                width: 100%;
+                max-width: 400px;
+            }
+            .child1 {
+                margin-bottom: 20px;
+            }
+            input, select {
+                width: 100%;
+                padding: 10px;
+                border-radius: 6px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            button{
+                color:white;
+                background-color: black;
+                border-radius: 6px;
+                height:40px;
+                width:70px;
+                border: none;
+            }
+            p{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="hero">
+            <div class="child">
+                <div class="child1">
+                    <h2>E-mail</h2>
+                    <input type="text" id="mail" placeholder="Enter Your mail">
+                </div>
+                <div class="child1">
+                    <h2>Password</h2>
+                    <input type="password" id="password" placeholder="Password">
+                </div><br>
+                <button onclick="passchecker()">Submit</button>
+                <p id="message"></p>
+            </div>
+        </section>
+    </body>
+    </html>
+    <script>
+        function passchecker() {
+            var email = document.getElementById("mail").value;
+            var password = document.getElementById("password").value;
+            if (email === "ajaybabu@gmail.com" && password === "ajay@123") {
+                window.location.href = "index.html";
+            } else {
+                document.getElementById("message").innerHTML = "Invalid mail or password";
+            }
+        }
+</script>
